@@ -104,8 +104,9 @@ header img {
 
 #notificaciones {
     display: inline-block;
-    padding-left: 450px;
     padding-top: 4px;
+    float: left;
+    margin-left: 425px;
 }
 
 #btn-add,
@@ -158,6 +159,7 @@ header img {
 
 #container {
     width: 100%;
+    height: 65px;
 }
 
 #container #titulo {
@@ -169,6 +171,7 @@ header img {
     display: inline-block;
     float: left;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 #container #titulo:hover {
@@ -178,6 +181,7 @@ header img {
 
 #titulo h3 {
     margin-top: 7px;
+    font-size: 18px;
 }
 
 #container #star {
@@ -188,6 +192,7 @@ header img {
     display: inline-block;
     float: left;
     margin-top: 10px;
+    margin-right: 10px;
     margin-left: 10px;
 }
 
@@ -201,6 +206,11 @@ header img {
     color: #ffffff;
     padding-left: 10px;
     line-height: 35px;
+}
+
+#container hr {
+    float: left;
+    margin-top: 19px;
 }
 
 
@@ -242,45 +252,47 @@ header img {
 
 #main {
     width: 100%;
-    margin-top: 65px;
+    height: auto;
 }
 
-#main #lista {
+#lista {
+    width: 270px;
+    height: auto;
+    float: left;
+}
+
+#lista #anadir {
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 6px;
     width: 260px;
-    height: 40px;
+    height: 32px;
     background-color: #006aa8;
     color: #b3d3e5;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 15px;
 }
 
-#lista form #anadir {
-    display: inline-block;
-    padding-left: 10px;
-    padding-top: 10px;
+#lista #anadir:hover {
+    background-color: #094a6d;
 }
 
 
 /*div oculto*/
 
-.boxEtiqueta {
-    display: none;
-}
-
 .cont {
-    width: 254px;
+    width: 276px;
     height: 86px;
     background-color: #e2e4e6;
-    margin-top: 32px;
     padding-top: 4px;
     padding-left: 4px;
     border-radius: 4px;
-    display: none;
 }
 
-.cont .oculto {
+.cont #oculto {
     display: block;
-    width: 235px;
+    width: 258px;
     height: 34px;
     background-color: #d7d8da;
     color: #8f969b;
@@ -317,8 +329,47 @@ header img {
     font-size: 30px;
     margin-top: 8px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .cont .icon-cancel:hover {
     color: #595757;
+}
+
+
+/*texto guardado en la lista*/
+
+.txtSave {
+    width: 258px;
+    height: 80px;
+    background-color: #d7d8da;
+    float: left;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#txt-tarjeta {
+    display: inline-block;
+    padding-left: 13px;
+    color: #a9a9a9;
+    cursor: pointer;
+}
+
+#txt-tarjeta:hover {
+    color: #5c5959;
+    text-decoration: underline;
+}
+
+#txt {
+    display: inline-block;
+    margin-left: 13px;
+    font-weight: 700;
+    width: 210px;
+}
+
+#puntitos:hover {
+    color: #a9a9a9;
+    cursor: pointer;
 }

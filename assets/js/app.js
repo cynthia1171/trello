@@ -21,6 +21,18 @@ guardar.classList.add('guardar');
 var cancel = document.createElement('span');
 cancel.classList.add('icon-cancel');
 
+//estilo tarjeta
+var txtSave = document.createElement('div');
+txtSave.classList.add('txtSave');
+var input2 = document.createElement('p');
+var tarjeta = document.createElement('span');
+var txtTarjeta = document.createTextNode('Añadir una tarjeta...');
+tarjeta.setAttribute('id', 'txt-tarjeta');
+input2.setAttribute('id', 'txt');
+var spanPunto = document.createElement('span');
+var puntito = document.createTextNode('...');
+spanPunto.setAttribute('id', 'puntitos');
+
 
 //añadir un cuadro para agregar listas
 anadir.addEventListener('click', function() {
@@ -48,17 +60,9 @@ cancel.addEventListener('click', function() {
 //evento para guardar lista 
 guardar.addEventListener('click', function() {
 
-    var txtSave = document.createElement('div');
-    txtSave.classList.add('txtSave');
-    var input2 = document.createElement('p');
+
     var txtInput = document.createTextNode(document.getElementById('oculto').value);
-    var tarjeta = document.createElement('span');
-    var txtTarjeta = document.createTextNode('Añadir una tarjeta...');
-    tarjeta.setAttribute('id', 'txt-tarjeta');
-    input2.setAttribute('id', 'txt');
-    var spanPunto = document.createElement('span');
-    var puntito = document.createTextNode('...');
-    spanPunto.setAttribute('id', 'puntitos');
+
 
     tarjeta.appendChild(txtTarjeta);
     spanPunto.appendChild(puntito);
@@ -77,3 +81,20 @@ guardar.addEventListener('click', function() {
 
 
 })
+
+
+function test() {
+    //elemento textarea
+    var txtArea = createElement('input');
+    txtArea.type = 'textarea';
+    var btnArea = createElement('input');
+    btnArea.type = 'button';
+    btnArea.value = 'Añadir';
+
+    txtSave.removeChild(tarjeta);
+    txtSave.appendChild(txtArea);
+    txtSave.appendChild(btnArea);
+    txtSave.appendChild(cancel);
+}
+
+txtSave.setAttribute('onclick', 'test()');
